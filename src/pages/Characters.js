@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {useCharacters} from '../hooks/useCharacters';
 
 
@@ -11,10 +12,10 @@ export default function Characters() {
     return(
         <div>
             {data.characters.results.map(char => {
-            return <div>
+            return <Link to={`/${char.id}`} key={char.id}>
                 <h1>{char.name}</h1>
                 <img src={char.image}/>
-            </div>
+            </Link>
         })}
         </div>
     )
