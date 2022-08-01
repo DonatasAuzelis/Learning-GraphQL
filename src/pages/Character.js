@@ -5,7 +5,7 @@ import {useCharacter} from '../hooks/useCharacter';
 
 export default function Characters() {
 
-    const {id} = useParams();
+    const {id} = useParams ();
     const {error, loading, data} = useCharacter(id);
 
     if (loading) return <h2>Loading...</h2>;
